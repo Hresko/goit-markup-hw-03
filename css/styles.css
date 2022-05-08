@@ -18,8 +18,8 @@
   --footer-logo-color: rgba(255,255,255,1);
   --street-address-color:rgba(255,255,255,1);
   --examples-button-background-color:rgba(245,244,250,1);
-  --header-border-bottom:rgba(236, 236, 236, 1);
   --examples-border: rgba(238, 238, 238, 1);
+  --header-border:rgba(236, 236, 236, 1);
 }
 /* Тіло */
 body {
@@ -58,7 +58,7 @@ img {
   margin: 0;
 }
 .page-header {
-  border-bottom: 1px solid var(--header-border-bottom);
+  border-bottom: 1px solid var(--header-border);
 }
 .flex-header,
 .site-nav,
@@ -88,18 +88,20 @@ address {
   color: var(--logo-accent-color);
 }
 
-.site-nav .link {
-  display: flex;
+.site-nav .link,
+.header-contacts .link {
+  display: block;
+  text-align: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-
 .site-nav li:not(:last-child),
 .header-contacts li:not(:last-child) {
   margin-right: 50px;
 }
+
 .header-contacts {
-  display: flex;
+  display:flex;
   align-items: center;
   margin-left: auto;
 }
@@ -147,6 +149,7 @@ address {
 }
 
 .hero-button {
+  padding: 10px 32px;
   border-width: 0;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
@@ -196,7 +199,12 @@ address {
   clip: rect(0 0 0 0); 
   overflow: hidden; 
 }
-
+.preference-list .preference-item {
+  width: 270px;
+}
+.preference-list li:not(:last-child) {
+ margin-right: 30px;
+}
 .title-preference {
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -245,7 +253,6 @@ address {
 .team-list li:not(:last-child) {
   margin-right: 30px;
 }
-
 .team-card {
   width: 270px;
   background-color: rgba(255, 255, 255, 1);
@@ -254,6 +261,7 @@ address {
 }
 .team-text {
   padding: 30px 32px;
+  text-align: center;
 }
 .worker-name {
   margin-bottom: 10px;
@@ -326,9 +334,10 @@ address {
   justify-content:center;
   margin-bottom: 50px;
 }
-
+.examples-button-list li:not(:last-child) {
+    margin-right: 8px;
+}
 .examples-button {
-  margin-right: 8px;
   padding: 6px 22px;
   border: transparent;
   border-radius: 4px;
